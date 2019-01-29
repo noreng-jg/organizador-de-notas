@@ -50,6 +50,7 @@ python main_app.py
 
 Deverá aparecer uma interface para a utilização do programa se o PyQt for instalado corretamente. 
 
-
+## Observações
+Devido a alguns problemas iniciais de acentuação com o utf-8 no python decidi comentar tudo no código em inglês.
 
 
