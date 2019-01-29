@@ -1,0 +1,13 @@
+My Clippings.txt
+*.pyc
+tests.py
+test2.py
+not_conventional.py
+Book_Notes/
+test_file.py
+GUI/*
+!GUI/main_app.py
+exceptions_lists
+intruc.py
+to-do
+.idea/
