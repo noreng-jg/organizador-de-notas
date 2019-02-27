@@ -39,4 +39,19 @@ def fill_lists(_listmobi, _listpdf, lm_to_fill, lp_to_fill):
         lp_to_fill.append(each)   
 
 def checkos():
-        return sys.platform =='win32'   
+        return sys.platform =='win32'
+
+
+def remove_u(word):
+    word_u = (word.encode('unicode-escape')).decode("utf-8", "strict")
+        # print(True)
+    if r'\u' in word_u:
+        return word_u.split('\\u')[1]
+    return word
+
+def title_gen_prob(_string):
+    selecting=''
+    for char in _string:
+        if char.isalpha() or char.isspace():
+            selecting+=char
+    return selecting
