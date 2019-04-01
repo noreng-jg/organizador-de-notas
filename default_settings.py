@@ -14,7 +14,7 @@ for key in note_type.keys():
 
 #make list with all the notes as global var 
 def read(pathname):
-    fileobj=open(pathname, 'r')
+    fileobj=open(pathname, 'r', encoding="utf-8")
     if checkos():
         note_list=fileobj.read().split(separator.replace('\r',''))
     else:

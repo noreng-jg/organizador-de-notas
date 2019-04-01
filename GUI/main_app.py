@@ -13,7 +13,6 @@ import errno
 sys.path.append('../')
 from default_settings import *
 from order_and_set import *
-from _codecs import decode
 from aux_functions import checkos
 
 try:
@@ -37,7 +36,7 @@ class Ui_Dialog(object):
     
     def validation(self,_string):
         if 'My Clippings.txt' in _string:
-            if (open(_string, 'r').read().split(separator) >= 1): #is there at least one note??
+            if len(open(_string, 'r', encoding="utf8").read().split(separator)) >= 1: #is there at least one note??
                 self.pushButton_2.setEnabled(True)
                 return True
         else:
