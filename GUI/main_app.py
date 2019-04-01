@@ -37,19 +37,19 @@ class Ui_Dialog(object):
     
     def validation(self,_string):
         if 'My Clippings.txt' in _string:
-            if open(_string, 'r').read().split(separator) >= 1: #is there at least one note??
+            if (open(_string, 'r').read().split(separator) >= 1): #is there at least one note??
                 self.pushButton_2.setEnabled(True)
                 return True
         else:
             return False
 
     def file_open(self):
-        name=QtGui.QFileDialog.getOpenFileName(None,'Abra o Arquivo')
-        nameforslash = decode(str(name),'utf-8')
+        name=str(QtGui.QFileDialog.getOpenFileName(None,'Abra o Arquivo'))
+        nameforslash = name
         folders=nameforslash.split('/')
         pathwindows=''
         for folder in folders:
-            pathwindows+=decode(folder, 'utf-8')+"\\"
+            pathwindows+=folder+"\\"
         if checkos():
             self.pathname=pathwindows[:-1]
         else:
@@ -60,13 +60,13 @@ class Ui_Dialog(object):
             self.textBrowser.setText('Desculpe, o arquivo possui formato diferente do Kindle')
     
     def file_save(self):
-        name=decode(str(QtGui.QFileDialog.getExistingDirectory(None,'Escolha o lugar para salvar as notas')),'utf-8')
+        name=str(QtGui.QFileDialog.getExistingDirectory(None,'Escolha o lugar para salvar as notas'))
         if checkos():#windows path
             complement = '\Book_Notes'
-            destiny_path=decode(str(os.path.join(*name.split('/'))) + complement, 'utf-8')
+            destiny_path=str(os.path.join(*name.split('/'))) + complement
         else:
             complement = '/Book_Notes'
-            destiny_path = '/' + decode(str(os.path.join(*name.split('/'))) + complement, 'utf-8')
+            destiny_path = '/' + str(os.path.join(*name.split('/')) + complement, 'utf-8')
         if not os.path.exists(name+complement):#if doesn't exists, create
             os.mkdir(name+complement)
 

@@ -1,7 +1,7 @@
 # -*- coding: utf-8 -*-:
 import sys
-reload(sys)
-sys.setdefaultencoding("utf-8")
+#reload(sys)
+#sys.setdefaultencoding("utf-8")
 from _codecs import decode
 from aux_functions import title_gen_prob
 
