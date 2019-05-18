@@ -17,10 +17,12 @@ def itsapdf(_string):
     _exception = ex_handling_name(pdf_exceptions, _string)
     if _exception:
         return clean_title_pdf(_exception,_string),_exception
-        
     else:
-        return _string.split(title_separator)[0], _string.split(title_separator)[1] #what is in the left,(_string.split(title_separator)[1]) #author in the right
-        
+        try:
+            return _string.split(title_separator)[0], _string.split(title_separator)[1] #what is in the left,(_string.split(title_separator)[1]) #author in the right
+        except IndexError:
+            return _string, 'unknown author'
+
 def itsamobi(_string):
     #exception for a specific book I was reading...
         if ':' in _string:
