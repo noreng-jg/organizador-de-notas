@@ -7,7 +7,7 @@
  ![github-small](https://user-images.githubusercontent.com/25461720/51930274-53ad7080-23e1-11e9-9bc3-35e8ca2ce8a0.png)
  
 ### Pré requisitos
-* Python 2.7
+* Python 3.6
 * PyQt4
 
 ### Instalação do PyQt
@@ -16,14 +16,14 @@
 https://www.saltycrane.com/blog/2008/01/how-to-install-pyqt4-on-ubuntu-linux/
 
 * Se você usa Windows,
-é necessário baixar o arquivo PyQt4-4.11.4-cp27-cp27m-win32.whl
- referente a instalação do PyQt versão 4 para a versão 2.7 do python que está disponível em :
+é necessário baixar o arquivo PyQt4‑4.11.4‑cp36‑cp36m‑win_amd64.whl
+ referente a instalação do PyQt versão 4 para a versão 3.6 do python que está disponível em :
 https://www.lfd.uci.edu/~gohlke/pythonlibs/#pyqt4
 
 Após download no diretório de Downloads execute o comando via cmd:
 
 ```
-pip install PyQt4-4.11.4-cp27-cp27m-win32.whl
+pip install PyQt4‑4.11.4‑cp36‑cp36m‑win_amd64.whl
 ```
 
 Talvez seja necessário atualizar sua versão do instaldor pip para tal, caso ocorra algum erro, para tanto utilize:
